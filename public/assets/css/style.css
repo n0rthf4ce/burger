@@ -1,0 +1,32 @@
+.image-fluid{
+  flex-grow: 1;
+  max-width: 100%;
+  max-height: 300px;
+}
+.page-title{
+  color: whitesmoke;
+  align-self: center;
+  flex-grow: 10;
+  font-size: 6rem;
+}
+.jumbotron{
+  background: black;
+  display: flex;
+}
+li {
+  padding: 5px;
+  margin: 5px;
+}
+#add-burger-header{
+  margin-top: 1rem;
+}
+.add-burger {
+  padding: 5px;
+  margin: 5px;
+}
+.uneaten{
+  background-color: rgb(133, 230, 247);
+}
+.devoured{
+  background-color: rgb(194, 194, 194);
+}

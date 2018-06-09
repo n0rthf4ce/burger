@@ -1,0 +1,37 @@
+<div class="jumbotron">
+    <img class="image-fluid" src="assets/images/burger.png">
+    <h1 class="page-title">Eat-da-burger!</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h2>Uneaten Burgers</h2>
+            <ul class="list-group">
+                    {{#each burgers}} {{#unless devoured}}
+                    <li class="uneaten list-group-item">
+                    <p>{{burger_name}}</p>
+                    <button class="btn btn-danger devour-button" id={{id}}>Devour It!</button>
+                    </li>
+                    {{/unless}} {{/each}}
+            </ul>
+        </div>
+        <div class="col-6">
+            <h2>Devoured Burgers</h2>
+            <ul class="list-group">
+                {{#each burgers}} {{#if devoured}}
+                <li class="list-group-item devoured">{{burger_name}}</li>
+                {{/if}} {{/each}}
+            </ul>
+        </div>
+    </div>
+    <h2 id="add-burger-header" class="mx-auto">Add a Burger</h2>
+    <form class="mx-auto add-burger">
+
+        <div class="form-group">
+            <label for="ca">Burger Name:</label>
+            <textarea id="burger-name" class="form-control" rows="2"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Create Burger</button>
+    </form>
+</div>
